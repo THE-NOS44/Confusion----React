@@ -63,16 +63,18 @@ import { Card, CardImg, CardText, CardBody,
         console.log(dish);
         
         if (dish == null) {
-            return (<div></div>);
+            return (<div></div>)
         }
 
-        const dishItem = <RenderDish dish={props.dish} />
-        const dishComment = <RenderComments comments={props.dish.comments}/>
-        
+        //const dishItem = <RenderDish dish={props.dish}/>;
+        //const dishComment = <RenderComments comments={props.dish.comments} />
+
         return (
-            <div className='row'>
-                {dishItem}
-                {dishComment}
+            <div className="container">
+                <div className='row'>
+                    <RenderDish dish={ props.dish }/>
+                    <RenderComments comments={ props.dish.comments } />
+                </div>
             </div>
         )
     }
